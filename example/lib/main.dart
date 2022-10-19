@@ -52,12 +52,14 @@ class MyApp extends StatelessWidget {
 
     return Scaffold(
       body: Center(
-        child: RaisedButton(
+        child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.blue,
+            ),
             child: Text(
               'Show Dialog',
               style: TextStyle(color: Colors.white),
             ),
-            color: Colors.blue,
             onPressed: () async {
               await pr.show();
 
@@ -131,10 +133,12 @@ class _FirstScreenState extends State<FirstScreen> {
 
     return Scaffold(
       body: Center(
-        child: RaisedButton(
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.blueAccent,
+          ),
           child: Text('Show dialog and go to next screen',
               style: TextStyle(color: Colors.white)),
-          color: Colors.blueAccent,
           onPressed: () {
             pr.show();
             Future.delayed(Duration(seconds: 3)).then((value) {
